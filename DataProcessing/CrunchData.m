@@ -18,7 +18,9 @@ SessionDate = bhv_data.date;
 
 
 SessionType = bhv_data.session_type(1);
+Protocol = bhv_data.protocol_name;
 NumOfTrials = bhv_data.num_trials_all;
+
 
 %% Construct TimeStamps (NumOfTrials X NumOfBehavioralEvents)
 % Each row represents a single trial. Each column represents the time when a behvaioral event occurs.
@@ -150,7 +152,7 @@ end
 %% Save the combined data as a single file.
 
 if ~nnz(strcmp(varargin,'BMI'))
-        save(TempfileName,'TimeStamps','Targets','LowPassJoyX','LowPassJoyY','LowPassJoyXY','MasterAlignInfo','TimeStampsColumnInfo','TargetsColumnInfo','SessionType','SessionDate','Licking');
+        save(TempfileName,'TimeStamps','Targets','LowPassJoyX','LowPassJoyY','LowPassJoyXY','MasterAlignInfo','TimeStampsColumnInfo','TargetsColumnInfo','SessionType','SessionDate','Licking','Protocol');
 else
         save(TempfileName,'TimeStamps','TimeStampsColumnInfo','SessionType','SessionDate','Licking');
 end

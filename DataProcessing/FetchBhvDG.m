@@ -40,6 +40,7 @@ else
 end
 
 data.session_type = bhv.saved_history.SessionTypeSection_SessionType(2:end);
+data.protocol_name = bhv.owner;
 if isfield(bhv.saved_history,'StimChoiceSection_TargetNum')
     data.target_num = bhv.saved_history.StimChoiceSection_TargetNum;
 end

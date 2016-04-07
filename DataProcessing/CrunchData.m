@@ -19,6 +19,7 @@ SessionDate = bhv_data.date;
 
 SessionType = bhv_data.session_type(1);
 Protocol = bhv_data.protocol_name;
+LEDPLacement = bhv_data.led_placement;
 NumOfTrials = bhv_data.num_trials_all;
 
 
@@ -152,7 +153,7 @@ end
 %% Save the combined data as a single file.
 
 if ~nnz(strcmp(varargin,'BMI'))
-        save(TempfileName,'TimeStamps','Targets','LowPassJoyX','LowPassJoyY','LowPassJoyXY','MasterAlignInfo','TimeStampsColumnInfo','TargetsColumnInfo','SessionType','SessionDate','Licking','Protocol');
+        save(TempfileName,'TimeStamps','Targets','LowPassJoyX','LowPassJoyY','LowPassJoyXY','MasterAlignInfo','TimeStampsColumnInfo','TargetsColumnInfo','SessionType','SessionDate','Licking','Protocol','LEDPlacement');
 else
         save(TempfileName,'TimeStamps','TimeStampsColumnInfo','SessionType','SessionDate','Licking');
 end

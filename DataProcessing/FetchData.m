@@ -108,12 +108,13 @@ for day = days
                 SessionType = data.SessionType;
                 SessionDate = data.SessionDate;
                 Protocol = data.Protocol;
+                LEDPlacement = data.LEDPlacement;
                 
                 Combinedfilename = [MyPath 'Combined/' AnimalName '/' AnimalName '-day' num2str(day) '-Combined-' num2str(unique_days(day)) '.mat'];
                 if exist(Combinedfilename)
-                    save(Combinedfilename,'TimeStamps','Targets','LowPassJoyX','LowPassJoyY','LowPassJoyXY','MasterAlignInfo','TimeStampsColumnInfo','TargetsColumnInfo','SessionType','SessionDate','Licking','Protocol','-append');
+                    save(Combinedfilename,'TimeStamps','Targets','LowPassJoyX','LowPassJoyY','LowPassJoyXY','MasterAlignInfo','TimeStampsColumnInfo','TargetsColumnInfo','SessionType','SessionDate','Licking','Protocol','LEDPlacement','-append');
                 else
-                    save(Combinedfilename,'TimeStamps','Targets','LowPassJoyX','LowPassJoyY','LowPassJoyXY','MasterAlignInfo','TimeStampsColumnInfo','TargetsColumnInfo','SessionType','SessionDate','Licking','Protocol');
+                    save(Combinedfilename,'TimeStamps','Targets','LowPassJoyX','LowPassJoyY','LowPassJoyXY','MasterAlignInfo','TimeStampsColumnInfo','TargetsColumnInfo','SessionType','SessionDate','Licking','Protocol','LEDPlacement');
                 end
             end
             delete(Joyfilename);

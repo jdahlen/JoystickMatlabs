@@ -41,8 +41,8 @@ end
 
 data.session_type = bhv.saved_history.SessionTypeSection_SessionType(2:end);
 data.protocol_name = bhv.owner;
-if isfield(bhv.saved_history,'SessionTypeSection_LEDPlacement');
-    data.led_placement = bhv.saved_history.SessionTypeSection_LEDPlacement(2:end);
+if isfield(bhv.saved_history,'StimChoiceSection_LEDPlacement');
+    data.led_placement = bhv.saved_history.StimChoiceSection_LEDPlacement(2:end);
 else
     data.led_placement = [];
 end
